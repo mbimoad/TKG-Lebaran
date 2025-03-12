@@ -72,9 +72,9 @@ document.querySelector('input').addEventListener('input', function(e) {
   if(this.checked) {
     scrolldown = setInterval(() => {
       if(window.innerWidth <= 550) {
-        scrollDown(10);
+        scrollDown(2);
       } else {
-        scrollDown();
+        scrollDown(1);
       }
     }, intervalTime);
   } else {
