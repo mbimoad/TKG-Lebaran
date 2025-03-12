@@ -60,11 +60,38 @@ function scrollDown(inc) {
     }
   }
   
-
-
   manipulateCars(inc);
   manipulateElement(curr);
 }
+
+function scrollDown2(inc) {
+  if(curr >= startPosition3) {
+    curr = startPosition3;
+  } else {
+    if(window.innerWidth <= 550) {
+      curr+=2;
+    } else {
+      curr++;
+    }
+  }
+  
+  manipulateCars(inc);
+  manipulateElement(curr);
+}
+
+function scrollUp2(inc) {
+  if(curr <= 0) curr = 0 
+  else {
+    if(window.innerWidth <= 550) {
+      curr--;
+    } else {
+      curr-=2;
+    }
+  }
+  manipulateCars(inc);
+  manipulateElement(curr);
+}
+
 
 let scrolldown = undefined;
 let intervalTime = window.innerWidth <= 550 ? 50 : 100; 
@@ -72,7 +99,7 @@ document.querySelector('input').addEventListener('input', function(e) {
   if(this.checked) {
     scrolldown = setInterval(() => {
       if(window.innerWidth <= 550) {
-        scrollDown(2);
+        scrollDown2(2);
       } else {
         scrollDown(1);
       }
