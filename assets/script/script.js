@@ -29,9 +29,9 @@ window.addEventListener('touchstart', function(event) {
 window.addEventListener('touchend', function(event) {
     const touchEndY = event.changedTouches[0].clientY;  // Posisi akhir sentuhan
     if (touchEndY < touchStartY) {
-      scrollDown(5);
+      scrollDown(10);
     } else if (touchEndY > touchStartY) {
-      scrollUp(5)
+      scrollUp(10)
     }
 });
 
@@ -61,7 +61,11 @@ let scrolldown = undefined;
 document.querySelector('input').addEventListener('input', function(e) {
   if(this.checked) {
     scrolldown = setInterval(() => {
-      scrollDown(1);
+      if(window.innerWidth <= 550) {
+        scrollDown(5);
+      } else {
+        scrollDown(1);
+      }
     }, 100);
   } else {
     clearInterval(scrolldown)
