@@ -29,9 +29,9 @@ window.addEventListener('touchstart', function(event) {
 window.addEventListener('touchend', function(event) {
     const touchEndY = event.changedTouches[0].clientY;  // Posisi akhir sentuhan
     if (touchEndY < touchStartY) {
-      scrollDown(10);
+      scrollDown(15);
     } else if (touchEndY > touchStartY) {
-      scrollUp(10)
+      scrollUp(15)
     }
 });
 
@@ -57,16 +57,16 @@ function scrollDown(inc) {
 }
 
 let scrolldown = undefined;
-
+let intervalTime = window.innerWidth <= 550 ? 50 : 100; 
 document.querySelector('input').addEventListener('input', function(e) {
   if(this.checked) {
     scrolldown = setInterval(() => {
       if(window.innerWidth <= 550) {
-        scrollDown(5);
+        scrollDown(10);
       } else {
-        scrollDown(1);
+        scrollDown();
       }
-    }, 100);
+    }, intervalTime);
   } else {
     clearInterval(scrolldown)
   }
