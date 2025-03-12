@@ -42,7 +42,7 @@ function scrollUp(inc) {
     if(window.innerWidth <= 550) {
       curr--;
     } else {
-      curr-=3;
+      curr-=5;
     }
   }
   manipulateCars(inc);
@@ -54,7 +54,7 @@ function scrollDown(inc) {
     curr = startPosition3;
   } else {
     if(window.innerWidth <= 550) {
-      curr+=3;
+      curr+=5;
     } else {
       curr++;
     }
