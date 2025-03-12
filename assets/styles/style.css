@@ -195,6 +195,14 @@ body.light {
   font-size: 1vw;
 }
 
+.frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
 .frame .contents {
   position: absolute;
   top: 0;

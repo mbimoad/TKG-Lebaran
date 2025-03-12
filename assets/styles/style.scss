@@ -27,6 +27,7 @@ body::before {
     z-index: -999;
     opacity: var(--opacity);
     transition: opacity 2s ease 0s;
+
 }
 
 .auto-scroll {
@@ -214,7 +215,13 @@ $goku: -1vw;
 
 
 .frame {
-
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    
     .contents {
         // border: 1px solid red;
         position: absolute;
