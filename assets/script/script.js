@@ -38,7 +38,13 @@ window.addEventListener('touchend', function(event) {
 
 function scrollUp(inc) {
   if(curr <= 0) curr = 0 
-  else curr--;
+  else {
+    if(window.innerWidth <= 550) {
+      curr--;
+    } else {
+      curr-=3;
+    }
+  }
   manipulateCars(inc);
   manipulateElement(curr);
 }
@@ -47,7 +53,11 @@ function scrollDown(inc) {
   if(curr >= startPosition3) {
     curr = startPosition3;
   } else {
-    curr++;
+    if(window.innerWidth <= 550) {
+      curr+=3;
+    } else {
+      curr++;
+    }
   }
   
 
