@@ -69,7 +69,7 @@ function scrollDown2(inc) {
     curr = startPosition3;
   } else {
     if(window.innerWidth <= 550) {
-      curr+=2;
+      curr+=1;
     } else {
       curr++;
     }
