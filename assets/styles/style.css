@@ -23,6 +23,7 @@ body::before {
 }
 
 .auto-scroll {
+  z-index: 1000000000000000000000000000;
   width: 15vw;
   text-align: center;
   justify-content: center;
