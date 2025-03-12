@@ -58,7 +58,7 @@ body::before {
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background: $darkMode;
     overflow: hidden;
 } body.moredark {
@@ -85,7 +85,9 @@ body.light {
     }
     
 }
-
+html {
+    overflow: hidden;
+}
 
 $goku: -1vw;
 
@@ -221,7 +223,7 @@ $goku: -1vw;
     bottom: 0;
     left: 0;
     overflow: hidden;
-    
+
     .contents {
         // border: 1px solid red;
         position: absolute;
@@ -744,7 +746,7 @@ $goku: -1vw;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
     pointer-events: none;
     z-index: -2;

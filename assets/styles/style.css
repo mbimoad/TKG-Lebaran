@@ -50,7 +50,7 @@ body::before {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: linear-gradient(to bottom, rgb(70, 57, 96), rgb(232, 148, 118));
   overflow: hidden;
 }
@@ -79,6 +79,10 @@ body.light {
     transform: translate(0, 0.2vw);
   }
 }
+html {
+  overflow: hidden;
+}
+
 @keyframes gokunimation {
   to {
     transform: scale(-1, 1) translate(-100vw, -1vw);
@@ -540,7 +544,7 @@ body.light {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   pointer-events: none;
   z-index: -2;

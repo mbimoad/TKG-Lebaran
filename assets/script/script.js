@@ -29,9 +29,9 @@ window.addEventListener('touchstart', function(event) {
 window.addEventListener('touchend', function(event) {
     const touchEndY = event.changedTouches[0].clientY;  // Posisi akhir sentuhan
     if (touchEndY < touchStartY) {
-      scrollDown(2);
+      scrollDown(5);
     } else if (touchEndY > touchStartY) {
-      scrollUp(2)
+      scrollUp(5)
     }
 });
 
