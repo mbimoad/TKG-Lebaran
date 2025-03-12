@@ -32,7 +32,7 @@ body::before {
 
 .auto-scroll {
     z-index: 999999999999999999999999999;
-    width: 15vw;
+    width: 25vw;
     text-align: center;
     justify-content: center;
     left: 0;
@@ -53,6 +53,10 @@ body::before {
         height: 1vw;
     } label {
         font-size: 1vw;
+    } div {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
     }
 }
 
@@ -975,6 +979,7 @@ $goku: -1vw;
     .auto-scroll {
         padding: 1vw;
         $size: 2vw;
+        width: 35vw;
         input {
             width: $size;
             height: $size;
@@ -1177,7 +1182,7 @@ $goku: -1vw;
     .auto-scroll {
         padding: 1.5vw;
         $size: 3vw;
-        width: 26vw;
+        width: 55vw;
         input {
             width: $size;
             height: $size;
@@ -1405,7 +1410,7 @@ $goku: -1vw;
 
   @media screen and (max-width: 380px) {
     .logo {
-        top: 8vw;
+        top: 15vw;
         left: 5vw;
         width: 18vw;
     }
@@ -1413,7 +1418,8 @@ $goku: -1vw;
     .auto-scroll {
         padding: 2vw;
         $size: 4vw;
-        width: 30vw;
+        width: 60vw;
+        // flex-direction: column;
         input {
             width: $size;
             height: $size;

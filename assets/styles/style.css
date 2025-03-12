@@ -24,7 +24,7 @@ body::before {
 
 .auto-scroll {
   z-index: 1000000000000000000000000000;
-  width: 15vw;
+  width: 25vw;
   text-align: center;
   justify-content: center;
   left: 0;
@@ -47,6 +47,11 @@ body::before {
 }
 .auto-scroll label {
   font-size: 1vw;
+}
+.auto-scroll div {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
 }
 
 body {
@@ -713,6 +718,7 @@ html {
   }
   .auto-scroll {
     padding: 1vw;
+    width: 35vw;
   }
   .auto-scroll input {
     width: 2vw;
@@ -856,7 +862,7 @@ html {
   }
   .auto-scroll {
     padding: 1.5vw;
-    width: 26vw;
+    width: 55vw;
   }
   .auto-scroll input {
     width: 3vw;
@@ -1029,13 +1035,13 @@ html {
 }
 @media screen and (max-width: 380px) {
   .logo {
-    top: 8vw;
+    top: 15vw;
     left: 5vw;
     width: 18vw;
   }
   .auto-scroll {
     padding: 2vw;
-    width: 30vw;
+    width: 60vw;
   }
   .auto-scroll input {
     width: 4vw;

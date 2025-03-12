@@ -92,16 +92,39 @@ function scrollUp2(inc) {
   manipulateElement(curr);
 }
 
+const scrollauto = document.querySelector('.scrollauto');
+const reverseauto = document.querySelector('.reverseauto'); 
 
 let scrolldown = undefined;
 let intervalTime = window.innerWidth <= 550 ? 50 : 100; 
-document.querySelector('input').addEventListener('input', function(e) {
+scrollauto.addEventListener('input', function(e) {
+  reverseauto.checked = false; 
+  clearInterval(scrolldown)
+  
   if(this.checked) {
     scrolldown = setInterval(() => {
       if(window.innerWidth <= 550) {
         scrollDown2(2);
       } else {
         scrollDown(1);
+      }
+    }, intervalTime);
+  } else {
+    clearInterval(scrolldown)
+  }
+})
+
+reverseauto.addEventListener('input', function(e) {
+  scrollauto.checked = false;
+  clearInterval(scrolldown)
+
+
+  if(this.checked) {
+    scrolldown = setInterval(() => {
+      if(window.innerWidth <= 550) {
+        scrollUp(2);
+      } else {
+        scrollUp(1);
       }
     }, intervalTime);
   } else {
