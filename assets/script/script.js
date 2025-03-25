@@ -6,6 +6,7 @@ const moon = document.querySelector('.moons');
 const goku = document.querySelector('.goku'); 
 const ig = document.querySelector('.ig'); 
 const logo = document.querySelector('.logo'); 
+const center = document.querySelector('.center');
 let x    = 0; 
 let curr = 0; 
 let goup = true; 
@@ -42,7 +43,7 @@ function scrollUp(inc) {
     if(window.innerWidth <= 550) {
       curr--;
     } else {
-      curr-=5;
+      curr-=1;
     }
   }
   manipulateCars(inc);
@@ -54,7 +55,7 @@ function scrollDown(inc) {
     curr = startPosition3;
   } else {
     if(window.innerWidth <= 550) {
-      curr+=5;
+      curr+=1;
     } else {
       curr++;
     }
@@ -97,22 +98,32 @@ const reverseauto = document.querySelector('.reverseauto');
 
 let scrolldown = undefined;
 let intervalTime = window.innerWidth <= 550 ? 50 : 100; 
-scrollauto.addEventListener('input', function(e) {
-  reverseauto.checked = false; 
-  clearInterval(scrolldown)
-  
-  if(this.checked) {
-    scrolldown = setInterval(() => {
-      if(window.innerWidth <= 550) {
-        scrollDown2(2);
-      } else {
-        scrollDown(1);
-      }
-    }, intervalTime);
-  } else {
+const autoScroll = () => {
+    reverseauto.checked = false; 
     clearInterval(scrolldown)
+    
+    if(scrollauto.checked) {
+      scrolldown = setInterval(() => {
+        if(window.innerWidth <= 550) {
+          scrollDown2(1);
+        } else {
+          scrollDown(1);
+        }
+      }, intervalTime);
+    } else {
+      clearInterval(scrolldown)
   }
+}
+
+
+
+scrollauto.addEventListener('input', function(e) {
+  autoScroll(); 
 })
+
+if(scrollauto.checked) autoScroll(); 
+
+
 
 reverseauto.addEventListener('input', function(e) {
   scrollauto.checked = false;
@@ -138,15 +149,15 @@ let isContent2load = false;
 // show element
 
 // first Slide
-let startPosition  = 50;
-let endPosition = 100; 
+let startPosition  = 100;
+let endPosition = 200; 
 
 // Second Slide
-let startPosition2 = 101; 
-let endPosition2    = 130; 
+let startPosition2 = 201; 
+let endPosition2    = 300; 
 
 // Third slide 
-let startPosition3 = 150
+let startPosition3 = 350
 ; 
 
 const manipulateElement = (curr) => {
@@ -216,6 +227,13 @@ const manipulateElement = (curr) => {
         moon.classList.add('sun');
         moon.classList.remove('night');
         document.querySelector('#fireworks-container').classList.remove('show');
+      
+    }
+
+    if(curr >= 330) {
+      center.classList.add('zoomed'); 
+    } else {
+      center.classList.remove('zoomed'); 
     }
 
 

@@ -159,6 +159,7 @@ html {
   text-align: center;
   flex-direction: column;
   gap: 5vw;
+  padding: 7vw;
 }
 .ig * {
   pointer-events: none;
@@ -321,6 +322,10 @@ html {
 .frame .contents .third-slide .images .right {
   display: flex;
   flex-direction: column;
+}
+.frame .contents .third-slide .images .center.zoomed {
+  transition: all 3s ease 0s;
+  transform: scale(2.5) translate(0, -5vw);
 }
 .frame .contents .third-slide .images .center {
   width: 30vw;
@@ -773,6 +778,9 @@ html {
     width: 1.5vw;
     height: 1.5vw;
   }
+  .frame .component .mountains-container {
+    bottom: -10vw;
+  }
   .frame .component .mountains img {
     width: 130%;
   }
@@ -809,7 +817,7 @@ html {
     font-size: 2.3vw;
   }
   .frame .contents .second-slide.show {
-    transform: translate(0, 20vw);
+    transform: translate(0, 15vw);
   }
   .frame .contents .second-slide .head h3 {
     font-size: 2vw;
@@ -830,7 +838,7 @@ html {
     width: 80vw;
   }
   .frame .contents .third-slide.show {
-    transform: translate(0, -27vw) scale(1);
+    transform: translate(0, -34vw) scale(1);
   }
   .frame .contents .third-slide {
     gap: 5vw;

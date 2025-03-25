@@ -176,6 +176,7 @@ $goku: -1vw;
     text-align: center;
     flex-direction: column;
     gap: 5vw;
+    padding: 7vw;
     .teams,
     .head {
         transform: translate(0, -3vw);
@@ -348,6 +349,12 @@ $goku: -1vw;
                     flex-direction: column;
                 }
 
+            
+
+                .center.zoomed {
+                    transition: all 3s ease 0s;
+                    transform: scale(2.5) translate(0, -5vw);
+                }
                 .center {
                     width: 30vw;
                 }
@@ -1061,7 +1068,9 @@ $goku: -1vw;
                     }
                 }
             }
-
+            .mountains-container {
+                bottom: -10vw;
+            }
 
             .mountains {
                 img {
@@ -1114,7 +1123,7 @@ $goku: -1vw;
             }
 
             .second-slide.show {
-                transform: translate(0, 20vw);
+                transform: translate(0, 15vw);
             }
 
             .second-slide {
@@ -1137,7 +1146,7 @@ $goku: -1vw;
             }
 
             .third-slide.show {
-                transform:translate(0, -27vw) scale(1);
+                transform:translate(0, -34vw) scale(1);
             }
 
             .third-slide {
