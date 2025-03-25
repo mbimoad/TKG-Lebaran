@@ -353,7 +353,7 @@ $goku: -1vw;
 
                 .center.zoomed {
                     transition: all 3s ease 0s;
-                    transform: scale(2.5) translate(0, -5vw);
+                    transform: scale(2.5);
                 }
                 .center {
                     width: 30vw;
@@ -527,7 +527,7 @@ $goku: -1vw;
                 bottom: 0;
                 display: flex;
                 z-index: -1;
-                bottom: 0vw;
+                bottom: -3vw;
                 img.rumput2 {
                     
                     width: 100%;
@@ -571,7 +571,7 @@ $goku: -1vw;
 
         .mountains-container {
             position: absolute;
-            bottom: 0;
+            bottom: -3vw;
             left: 0;
             right: 0;
             animation: mountainsAnimation 80s linear 0s infinite;
@@ -1170,6 +1170,11 @@ $goku: -1vw;
 
                     .center {
                         width: 40vw;
+                    }
+
+                    .center.zoomed {
+                        transition: all 3s ease 0s;
+                        transform: scale(2.5) translate(0, -5vw);
                     }
                 }
     

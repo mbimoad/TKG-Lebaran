@@ -325,7 +325,7 @@ html {
 }
 .frame .contents .third-slide .images .center.zoomed {
   transition: all 3s ease 0s;
-  transform: scale(2.5) translate(0, -5vw);
+  transform: scale(2.5);
 }
 .frame .contents .third-slide .images .center {
   width: 30vw;
@@ -479,7 +479,7 @@ html {
   bottom: 0;
   display: flex;
   z-index: -1;
-  bottom: 0vw;
+  bottom: -3vw;
 }
 .frame .component .ways .rumputs img.rumput2 {
   width: 100%;
@@ -516,7 +516,7 @@ html {
 }
 .frame .component .mountains-container {
   position: absolute;
-  bottom: 0;
+  bottom: -3vw;
   left: 0;
   right: 0;
   animation: mountainsAnimation 80s linear 0s infinite;
@@ -860,6 +860,10 @@ html {
   }
   .frame .contents .third-slide .images .center {
     width: 40vw;
+  }
+  .frame .contents .third-slide .images .center.zoomed {
+    transition: all 3s ease 0s;
+    transform: scale(2.5) translate(0, -5vw);
   }
 }
 @media screen and (max-width: 550px) {
